@@ -31,13 +31,13 @@ namespace borsa.Admin
             if (rdbAlici.Checked == true && rdbSatici.Checked == false)
             {
                 DataTable dt = new DataTable();
-                ai.veriListele(dgwUyeler, dt, "tblSatici");
+                ai.veriListele(dgwUyeler, dt, "tblAlici");
                 dgwUyeler.DataSource = dt;
             }
             else if (rdbAlici.Checked == false && rdbSatici.Checked == true)
             {
                 DataTable dt = new DataTable();
-                ai.veriListele(dgwUyeler, dt, "tblAlici");
+                ai.veriListele(dgwUyeler, dt, "tblSatici");
                 dgwUyeler.DataSource = dt;
             }
         }
@@ -51,13 +51,16 @@ namespace borsa.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string id = lblVeriSil.Text;
             if (rdbAlici.Checked == true && rdbSatici.Checked == false)
             {
-                ai.veriSilme("tblAlici", lblVeriSil.Text);
+                ai.veriSilme("tblAlici", id);
+                MessageBox.Show("Alıcı silindi");
             }
             else if (rdbAlici.Checked == false && rdbSatici.Checked == true)
             {
-                ai.veriSilme("tblSatici", lblVeriSil.Text);
+                ai.veriSilme("tblSatici", id);
+                MessageBox.Show("Satıcı silindi");
             }
         }
     }
