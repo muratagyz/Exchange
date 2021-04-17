@@ -75,7 +75,6 @@
     <Compile Include="Admin\adminGiris.Designer.cs">
       <DependentUpon>adminGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="datagridwievGorunum.cs" />
     <Compile Include="girisKontrol.cs" />
     <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.cs">
       <SubType>Form</SubType>
@@ -83,6 +82,7 @@
     <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.Designer.cs">
       <DependentUpon>kayitOl.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminIslemler.cs" />
     <Compile Include="Satıcı\saticiGiris.cs">
       <SubType>Form</SubType>
     </Compile>

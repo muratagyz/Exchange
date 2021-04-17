@@ -16,7 +16,7 @@ namespace borsa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new secimEkrani());
+            Application.Run(new AdminYonetim());
         }
     }
 }

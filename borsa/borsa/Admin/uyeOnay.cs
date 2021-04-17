@@ -17,8 +17,6 @@ namespace borsa.Admin
         public uyeOnay()
         {
             InitializeComponent();
-            datagridwievGorunum dgwg = datagridwievGorunum();
-            dgwg.gorunum(dgwUyeler);
         }
 
         private void uyeOnay_Load(object sender, EventArgs e)
@@ -26,27 +24,41 @@ namespace borsa.Admin
 
         }
 
+        adminIslemler ai = new adminIslemler();
+
         private void btnListele_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
-            con.Open();
-            if (rdbAlici.Checked==true && rdbSatici.Checked == false)
+            if (rdbAlici.Checked == true && rdbSatici.Checked == false)
             {
-                SqlCommand cmd = new SqlCommand("select ad,soyad,kad from tblAlici", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
-                da.Fill(dt);
+                ai.veriListele(dgwUyeler, dt, "tblSatici");
                 dgwUyeler.DataSource = dt;
             }
             else if (rdbAlici.Checked == false && rdbSatici.Checked == true)
             {
-                SqlCommand cmd = new SqlCommand("select ad,soyad,kad from tblSatici", con);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
-                da.Fill(dt);
+                ai.veriListele(dgwUyeler, dt, "tblAlici");
                 dgwUyeler.DataSource = dt;
             }
-            con.Close();
+        }
+
+        private void dgwUyeler_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lblId.Text = dgwUyeler.CurrentRow.Cells[3].Value.ToString();
+            lblVeriSil.Text = dgwUyeler.CurrentRow.Cells[0].Value.ToString();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (rdbAlici.Checked == true && rdbSatici.Checked == false)
+            {
+                ai.veriSilme("tblAlici", lblVeriSil.Text);
+            }
+            else if (rdbAlici.Checked == false && rdbSatici.Checked == true)
+            {
+                ai.veriSilme("tblSatici", lblVeriSil.Text);
+            }
         }
     }
 }
