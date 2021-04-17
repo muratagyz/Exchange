@@ -13,11 +13,11 @@ namespace borsa
 
         public bool bilgiKontrol = false;
 
-        public void kontrol(string tabloAdi, string id, string sifre, string textBoxKullaniciAd, string textBoxSifre)
+        public void kontrol(string tabloAdi, string id, string sifree, string textBoxKullaniciAd, string textBoxSifre)
         {
             SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM " + tabloAdi.ToString() + " where " + id.ToString() + "=@user AND " + sifre.ToString() + "=@pass", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM " + tabloAdi.ToString() + " where " + id.ToString() + "=@user AND " + sifree.ToString() + "=@pass", con);
             cmd.Parameters.AddWithValue("@user", textBoxKullaniciAd);
             cmd.Parameters.AddWithValue("@pass", textBoxSifre);
             SqlDataReader dr = cmd.ExecuteReader();
