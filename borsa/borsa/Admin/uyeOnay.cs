@@ -63,5 +63,17 @@ namespace borsa.Admin
                 MessageBox.Show("Satıcı silindi");
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            AdminYonetim ay = new AdminYonetim();
+            ay.Show();
+            this.Hide();
+        }
     }
 }
