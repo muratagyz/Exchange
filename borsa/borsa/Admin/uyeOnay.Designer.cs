@@ -39,11 +39,11 @@
             this.rdbAlici = new System.Windows.Forms.RadioButton();
             this.rdbSatici = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
             this.btnListele = new System.Windows.Forms.Button();
             this.lblVeriSil = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.borsaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAliciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUyeler)).BeginInit();
@@ -61,6 +61,7 @@
             this.btnOnay.TabIndex = 2;
             this.btnOnay.Text = "Onayla";
             this.btnOnay.UseVisualStyleBackColor = false;
+            this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
             // 
             // button1
             // 
@@ -137,16 +138,6 @@
             this.label3.Text = "🡄";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
-            this.lblId.Location = new System.Drawing.Point(395, 9);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(69, 24);
-            this.lblId.TabIndex = 20;
-            this.lblId.Text = "alionay";
-            // 
             // btnListele
             // 
             this.btnListele.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -188,6 +179,15 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "ÜYE ONAYLAMA SİSTEMİ";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F);
+            this.lblId.Location = new System.Drawing.Point(395, 9);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 24);
+            this.lblId.TabIndex = 20;
+            // 
             // uyeOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,10 +227,10 @@
         private System.Windows.Forms.RadioButton rdbAlici;
         private System.Windows.Forms.RadioButton rdbSatici;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Button btnListele;
         private System.Windows.Forms.Label lblVeriSil;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblId;
     }
 }

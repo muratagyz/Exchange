@@ -37,6 +37,7 @@ namespace borsa
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblOnay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,12 +118,23 @@ namespace borsa
             this.label3.Text = "🡄";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // lblOnay
+            // 
+            this.lblOnay.AutoSize = true;
+            this.lblOnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOnay.Location = new System.Drawing.Point(209, 9);
+            this.lblOnay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOnay.Name = "lblOnay";
+            this.lblOnay.Size = new System.Drawing.Size(0, 17);
+            this.lblOnay.TabIndex = 13;
+            // 
             // frmLoginSatici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(235, 367);
+            this.Controls.Add(this.lblOnay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -150,5 +162,6 @@ namespace borsa
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblOnay;
     }
 }

@@ -16,7 +16,7 @@ namespace borsa
         public void veriListele(DataGridView dgw, DataTable dt, string tabloAd)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select id,ad,soyad,kad from  " + tabloAd + "  where uyelikDurum='True'", con);
+            SqlCommand cmd = new SqlCommand("select id,ad,soyad,kad,onay from  " + tabloAd + "  where uyelikDurum='True'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             con.Close();
@@ -26,6 +26,14 @@ namespace borsa
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("UPDATE " + tabloAdi + " SET uyelikDurum='False' where id=" + id + "", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void uyeOnay(string tabloAdi, string id)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE " + tabloAdi + " SET onay='True' where id=" + id + "", con);
             cmd.ExecuteNonQuery();
             con.Close();
         }

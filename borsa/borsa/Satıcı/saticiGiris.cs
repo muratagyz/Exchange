@@ -19,7 +19,7 @@ namespace borsa
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -33,12 +33,18 @@ namespace borsa
         private void button1_Click(object sender, EventArgs e)
         {
             girisKontrol validasyon = new girisKontrol();
+            lblOnay.Text = validasyon.onayliMi(txtKullaniciAdi.Text,"tblSatici");
             validasyon.kontrol("tblSatici", "kad", "sifre", txtKullaniciAdi.Text, txtSifre.Text);
-            if (validasyon.bilgiKontrol == true)
+            if (validasyon.bilgiKontrol == true && lblOnay.Text == true.ToString())
             {
+                MessageBox.Show("Başarılı bir şekilde giriş yaptınız.");
                 SaticiYonteim sy = new SaticiYonteim();
                 sy.Show();
                 this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Giriş işlemi başarısız.");
             }
         }
     }

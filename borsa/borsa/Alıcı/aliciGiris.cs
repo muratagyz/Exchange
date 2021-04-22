@@ -28,12 +28,18 @@ namespace borsa
         {
 
             girisKontrol validasyon = new girisKontrol();
+            lblOnay.Text = validasyon.onayliMi(txtKullaniciAdi.Text,"tblAlici");
             validasyon.kontrol("tblAlici", "kad", "sifre", txtKullaniciAdi.Text, txtSifre.Text);
-            if (validasyon.bilgiKontrol == true)
+            if (validasyon.bilgiKontrol == true && lblOnay.Text == true.ToString())
             {
+                MessageBox.Show("Başarılı bir şekilde giriş yaptınız.");
                 AliciYonetim ay = new AliciYonetim();
                 ay.Show();
                 this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Giriş işlemi başarısız.");
             }
         }
 

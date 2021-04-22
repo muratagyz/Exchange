@@ -21,6 +21,8 @@ namespace borsa.Admin
 
         private void uyeOnay_Load(object sender, EventArgs e)
         {
+            lblId.Visible = false;
+            lblVeriSil.Visible = false;
 
         }
 
@@ -74,6 +76,22 @@ namespace borsa.Admin
             AdminYonetim ay = new AdminYonetim();
             ay.Show();
             this.Hide();
+        }
+
+        private void btnOnay_Click(object sender, EventArgs e)
+        {
+            string id = lblVeriSil.Text;
+            if (rdbAlici.Checked == true && rdbSatici.Checked == false)
+            {
+
+                ai.uyeOnay("tblAlici",id);
+                MessageBox.Show("Alıcı onaylandı");
+            }
+            else if (rdbAlici.Checked == false && rdbSatici.Checked == true)
+            {
+                ai.uyeOnay("tblSatici", id);
+                MessageBox.Show("Satıcı onaylandı");
+            }
         }
     }
 }
