@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using borsa.abstracts;
 
 namespace borsa
 {
-    public class girisKontrol
+    public class girisKontrol : ILoginDal
     {
-
         public bool bilgiKontrol = false;
 
         public void kontrol(string tabloAdi, string id, string sifre, string textBoxKullaniciAd, string textBoxSifre)
@@ -31,9 +31,7 @@ namespace borsa
             }
 
             con.Close();
-
         }
-
 
         public string onayliMi(string txtkAd, string tblAd)
         {

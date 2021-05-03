@@ -110,3 +110,4 @@ C:\Users\kaanzzdemir\Source\Repos\muratagyz\Exchange\borsa\borsa\bin\Debug\borsa
 C:\Users\mrtag\Source\Repos\Exchange\borsa\borsa\bin\Debug\borsa.exe.config
 C:\Users\mrtag\Source\Repos\Exchange\borsa\borsa\bin\Debug\borsa.exe
 C:\Users\mrtag\Source\Repos\Exchange\borsa\borsa\bin\Debug\borsa.pdb
+C:\Users\kaanzzdemir\Source\Repos\muratagyz\Exchange\borsa\borsa\obj\Debug\borsa.Satıcı.urunEkle.resources

@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\borsa"
+    "\\borsa",
+    "\\borsa\\borsa",
+    "\\borsa\\borsa\\Admin"
   ],
-  "SelectedNode": "\\borsa\\borsa.sln",
+  "SelectedNode": "\\borsa\\borsa\\Admin\\adminGiris.resx",
   "PreviewInSolutionExplorer": false
 }
