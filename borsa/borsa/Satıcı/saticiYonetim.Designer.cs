@@ -35,6 +35,7 @@ namespace borsa
             this.satisonayla = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@ namespace borsa
             // 
             this.sonislemler.BackColor = System.Drawing.Color.MediumAquamarine;
             this.sonislemler.ForeColor = System.Drawing.Color.White;
-            this.sonislemler.Location = new System.Drawing.Point(258, 68);
+            this.sonislemler.Location = new System.Drawing.Point(258, 66);
             this.sonislemler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sonislemler.Name = "sonislemler";
             this.sonislemler.Size = new System.Drawing.Size(101, 45);
@@ -71,6 +72,7 @@ namespace borsa
             this.satisonayla.TabIndex = 29;
             this.satisonayla.Text = "Satış Yap";
             this.satisonayla.UseVisualStyleBackColor = false;
+            this.satisonayla.Click += new System.EventHandler(this.satisonayla_Click);
             // 
             // label1
             // 
@@ -98,12 +100,25 @@ namespace borsa
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 17);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "0";
+            // 
             // SaticiYonteim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(404, 198);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sonislemler);
@@ -111,6 +126,7 @@ namespace borsa
             this.Controls.Add(this.label1);
             this.Name = "SaticiYonteim";
             this.Text = "SaticiYonteim";
+            this.Load += new System.EventHandler(this.SaticiYonteim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,5 +139,6 @@ namespace borsa
         private System.Windows.Forms.Button satisonayla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

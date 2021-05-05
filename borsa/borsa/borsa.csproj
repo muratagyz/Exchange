@@ -47,11 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="abstracts\ILoginDal.cs" />
+    <Compile Include="abstracts\IUrunDal.cs" />
     <Compile Include="Admin\AdminYonetim.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\AdminYonetim.Designer.cs">
       <DependentUpon>AdminYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\satisOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\satisOnay.Designer.cs">
+      <DependentUpon>satisOnay.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\uyeOnay.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,8 @@
     <Compile Include="Admin\adminGiris.Designer.cs">
       <DependentUpon>adminGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Concrete\urun.cs" />
+    <Compile Include="Concrete\urunManager.cs" />
     <Compile Include="girisKontrol.cs" />
     <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.cs">
       <SubType>Form</SubType>
@@ -128,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminYonetim.resx">
       <DependentUpon>AdminYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\satisOnay.resx">
+      <DependentUpon>satisOnay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\uyeOnay.resx">
       <DependentUpon>uyeOnay.cs</DependentUpon>

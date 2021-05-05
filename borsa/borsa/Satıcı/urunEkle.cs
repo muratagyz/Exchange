@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using borsa.Concrete;
 
 namespace borsa.Satıcı
 {
     public partial class urunEkle : Form
     {
+
+        public string id;
+
         public urunEkle()
         {
             InitializeComponent();
@@ -21,11 +25,20 @@ namespace borsa.Satıcı
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tblUrun (urunAd, urunMiktar, urunFiyat) VALUES(" + txtAd.Text + "," + txtMiktar.Text + "," + txtFiyat.Text + ")", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+            urun product = new urun();
+
+            product.urunAdi = txtAd.Text;
+            product.urunFiyati = txtFiyat.Text;
+            product.urunMiktar = txtMiktar.Text;
+            product.saticiId = lblId.Text;
+
+            urunManager productManager = new urunManager();
+            productManager.urunSatis(product.urunAdi, product.urunFiyati, product.urunMiktar, product.saticiId);
+        }
+
+        private void urunEkle_Load(object sender, EventArgs e)
+        {
+            lblId.Text = id;
         }
     }
 }

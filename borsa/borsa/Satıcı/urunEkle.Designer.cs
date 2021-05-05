@@ -36,6 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtMiktar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -109,11 +110,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblId.Location = new System.Drawing.Point(12, 18);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 24);
+            this.lblId.TabIndex = 10;
+            // 
             // urunEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 238);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtFiyat);
@@ -124,6 +135,7 @@
             this.Controls.Add(this.label1);
             this.Name = "urunEkle";
             this.Text = "urunEkle";
+            this.Load += new System.EventHandler(this.urunEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +151,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMiktar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblId;
     }
 }

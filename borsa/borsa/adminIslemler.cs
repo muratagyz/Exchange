@@ -21,6 +21,14 @@ namespace borsa
             da.Fill(dt);
             con.Close();
         }
+        public void veriListele2(DataGridView dgw, DataTable dt)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select tblUrun.id, tblUrun.urunAd, tblUrun.urunMiktar, tblUrun.urunFiyat,  tblSatici.ad, tblUrun.onay from tblUrun INNER JOIN tblSatici on tblUrun.urunSatici = tblSatici.id", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            con.Close();
+        }
 
         public void veriSilme(string tabloAdi, string id)
         {
@@ -30,10 +38,17 @@ namespace borsa
             con.Close();
         }
 
-        public void uyeOnay(string tabloAdi, string id)
+        public void onay(string tabloAdi, string id)
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("UPDATE " + tabloAdi + " SET onay='True' where id=" + id + "", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public void red(string tabloAdi, string id)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE " + tabloAdi + " SET onay='False' where id=" + id + "", con);
             cmd.ExecuteNonQuery();
             con.Close();
         }

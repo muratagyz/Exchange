@@ -30,5 +30,12 @@ namespace borsa
             uo.Show();
             this.Hide();
         }
+
+        private void satisonayla_Click(object sender, EventArgs e)
+        {
+            Admin.satisOnay so = new Admin.satisOnay();
+            so.Show();
+            this.Hide();
+        }
     }
 }

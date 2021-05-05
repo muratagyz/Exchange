@@ -30,22 +30,39 @@ namespace borsa
             this.Hide();
         }
 
+        SaticiYonteim sy = new SaticiYonteim();
+
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Satıcı.urunEkle ue = new Satıcı.urunEkle();
             girisKontrol validasyon = new girisKontrol();
             lblOnay.Text = validasyon.onayliMi(txtKullaniciAdi.Text, "tblSatici");
             validasyon.kontrol("tblSatici", "kad", "sifre", txtKullaniciAdi.Text, txtSifre.Text);
             if (validasyon.bilgiKontrol == true && lblOnay.Text == true.ToString())
             {
+                string kid;
+                SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd2 = new SqlCommand("Select id from tblSatici where kad = '" + txtKullaniciAdi.Text + "'", con);
+                SqlDataReader dr = cmd2.ExecuteReader();
+                while (dr.Read())
+                {
+                    kid = dr["id"].ToString();
+                    sy.id = kid.ToString();
+                }
                 MessageBox.Show("Başarılı bir şekilde giriş yaptınız.");
-                SaticiYonteim sy = new SaticiYonteim();
-                sy.Show();
-                this.Hide();
+                sy.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Giriş işlemi başarısız.");
             }
+        }
+
+        private void txtSifre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

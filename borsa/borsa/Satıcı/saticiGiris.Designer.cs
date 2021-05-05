@@ -74,6 +74,7 @@ namespace borsa
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(150, 23);
             this.txtSifre.TabIndex = 9;
+            this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
             // 
             // txtKullaniciAdi
             // 
@@ -127,6 +128,7 @@ namespace borsa
             this.lblOnay.Name = "lblOnay";
             this.lblOnay.Size = new System.Drawing.Size(0, 17);
             this.lblOnay.TabIndex = 13;
+            this.lblOnay.Visible = false;
             // 
             // frmLoginSatici
             // 

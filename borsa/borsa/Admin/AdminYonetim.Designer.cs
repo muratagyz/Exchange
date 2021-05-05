@@ -62,6 +62,7 @@ namespace borsa
             this.satisonayla.TabIndex = 2;
             this.satisonayla.Text = "Satış Onaylama";
             this.satisonayla.UseVisualStyleBackColor = false;
+            this.satisonayla.Click += new System.EventHandler(this.satisonayla_Click);
             // 
             // sonislemler
             // 

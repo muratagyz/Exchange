@@ -68,7 +68,7 @@ namespace borsa.Admin
 
         private void label3_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label3_Click_1(object sender, EventArgs e)
@@ -84,12 +84,12 @@ namespace borsa.Admin
             if (rdbAlici.Checked == true && rdbSatici.Checked == false)
             {
 
-                ai.uyeOnay("tblAlici",id);
+                ai.onay("tblAlici", id);
                 MessageBox.Show("Alıcı onaylandı");
             }
             else if (rdbAlici.Checked == false && rdbSatici.Checked == true)
             {
-                ai.uyeOnay("tblSatici", id);
+                ai.onay("tblSatici", id);
                 MessageBox.Show("Satıcı onaylandı");
             }
         }
