@@ -4,7 +4,7 @@
 <hr>
 
 
-| Name     | Character |
+| Ad     | Soyad |
 | ---      | ---       |
-| Backtick | `         |
-| Pipe     | \|        |
+| Kaan | ÖZDEMİR        |
+| Murat  | AĞYÜZ        |
