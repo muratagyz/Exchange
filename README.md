@@ -2,4 +2,5 @@
 
 <h3>Katkıda Bulunanlar</h3>
 <hr>
-<li>a </li>
+<li>Kaan ÖZDEMİR</li>
+<li>Murat AĞYÜZ</li>
