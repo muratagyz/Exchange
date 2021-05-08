@@ -3,7 +3,7 @@
 <h3>Katkıda Bulunanlar</h3>
 <hr>
 
-| Ad     | Soyad |
-| ---      | ---       |
-| Kaan | ÖZDEMİR        |
-| Murat  | AĞYÜZ        |
+| Ad     | Soyad |  Okul Numarası |
+| ---      | ---       | ---      |
+| Kaan | ÖZDEMİR        | #      |
+| Murat  | AĞYÜZ        | #     |
