@@ -3,7 +3,7 @@
 <h3>Katkıda Bulunanlar</h3>
 <hr>
 
-
+| Ad      Soyad |
 | Ad     | Soyad |
 | ---      | ---       |
 | Kaan | ÖZDEMİR        |
