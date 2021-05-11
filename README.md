@@ -3,25 +3,21 @@
 ## Proje Açıklama:
 > Yazılım yapımı vize ödevi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek.
 
-<br />
 ## Gerekli Araçlar
 
 <ul>
   <li><a href="https://visualstudio.microsoft.com/tr/downloads/">Visual Studio</a></li>
   <li><a href="https://www.microsoft.com/tr-tr/sql-server/sql-server-downloads">Microsoft Sql Server Management Studio</a></li>
 </ul>
-<br />
 
 ## Projeyi İndirme
 Proje İndirme Linki:
 ```
 $ git clone https://github.com/muratagyz/Exchange
 ```
-<br />
 
 ## Scrum Table Ekran Görüntüsü
 ![Image of Yaktocat](https://github.com/muratagyz/Exchange/blob/main/ScrumTable/exchange1.PNG)
-<br />
 
 ## Katkıda Bulunanlar
 <table>
