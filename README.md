@@ -21,7 +21,7 @@ $ git clone https://github.com/muratagyz/Exchange
 ## Katkıda Bulunanlar
 <table>
   <tr>
-    <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Kent C. Dodds</b></sub></a></td>
-    <td align="center"><a href="https://github.com/jfmengels"><img src="https://avatars.githubusercontent.com/u/3869412?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Jeroen Engels</b></sub></a</td>
+    <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/57274202?v=4" width="100px;" alt=""/><br /><sub><b>Kaan ÖZDEMİR</b></sub></a></td>
+    <td align="center"><a href="https://github.com/jfmengels"><img src="https://avatars.githubusercontent.com/u/57285600?v=4" width="100px;" alt=""/><br /><sub><b>Murat AĞYÜZ</b></sub></a</td>
   </tr>
   </table>
