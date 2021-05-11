@@ -1,7 +1,9 @@
 <h1>Yazılım Yapımı [Borsa Projesi] </h1>
 
 ## Proje Açıklama:
-> Yazılım yapımı vize ödevi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek.
+> Yazılım yapımı vize ödevi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek. Kullandığımız teknolojiler:
+> <li> Windiwos Form </li>  
+> <li> MSSQL </li>
 
 ## Gerekli Araçlar
 
