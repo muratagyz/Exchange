@@ -1,5 +1,8 @@
 <h1>Yazılım Yapımı [Borsa Projes] </h1>
 
+## Proje Amacı:
+> Yazılım yapımı vize ödevi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek.
+
 ## Gerekli Araçlar
 
 <ul>
