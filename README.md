@@ -11,15 +11,18 @@
   <li><a href="https://www.microsoft.com/tr-tr/sql-server/sql-server-downloads">Microsoft Sql Server Management Studio</a></li>
 </ul>
 <br />
+
 ## Projeyi İndirme
 Proje İndirme Linki:
 ```
 $ git clone https://github.com/muratagyz/Exchange
 ```
 <br />
+
 ## Scrum Table Ekran Görüntüsü
 ![Image of Yaktocat](https://github.com/muratagyz/Exchange/blob/main/ScrumTable/exchange1.PNG)
 <br />
+
 ## Katkıda Bulunanlar
 <table>
   <tr>
