@@ -1,4 +1,4 @@
-<h1>Yazılım Yapımı [Borsa Projes] </h1>
+<h1>Yazılım Yapımı [Borsa Projesi] </h1>
 
 ## Proje Amacı:
 > Yazılım yapımı vize ödevi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek.
@@ -15,3 +15,5 @@ Proje İndirme Linki:
 ```
 https://github.com/muratagyz/Exchange
 ```
+## Scrum Table Ekran Görüntüsü
+![Image of Yaktocat](https://github.com/muratagyz/Exchange/blob/main/ScrumTable/exchange1.PNG)
