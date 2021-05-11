@@ -14,7 +14,6 @@
 </ul>
 
 ## Projeyi İndirme
-Proje İndirme Linki:
 ```
 $ git clone https://github.com/muratagyz/Exchange
 ```
