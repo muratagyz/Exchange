@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8C5128B-E109-499D-8685-01B4E245049A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>borsa</RootNamespace>
+    <AssemblyName>borsa</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abstracts\ILoginDal.cs" />
+    <Compile Include="abstracts\IUrunDal.cs" />
+    <Compile Include="Admin\AdminYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminYonetim.Designer.cs">
+      <DependentUpon>AdminYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\bakiyeOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\bakiyeOnay.Designer.cs">
+      <DependentUpon>bakiyeOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\satisOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\satisOnay.Designer.cs">
+      <DependentUpon>satisOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uyeOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\uyeOnay.Designer.cs">
+      <DependentUpon>uyeOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\AliciYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\AliciYonetim.Designer.cs">
+      <DependentUpon>AliciYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\bakiyeYukle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\bakiyeYukle.Designer.cs">
+      <DependentUpon>bakiyeYukle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\satinAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\satinAl.Designer.cs">
+      <DependentUpon>satinAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\varliklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\varliklar.Designer.cs">
+      <DependentUpon>varliklar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorsaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BorsaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\adminGiris.Designer.cs">
+      <DependentUpon>adminGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\urun.cs" />
+    <Compile Include="Concrete\urunManager.cs" />
+    <Compile Include="Giriş ve Kayıt Ekranı\girisKontrol.cs" />
+    <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.Designer.cs">
+      <DependentUpon>kayitOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminIslemler.cs" />
+    <Compile Include="Satıcı\saticiGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satıcı\saticiGiris.Designer.cs">
+      <DependentUpon>saticiGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\aliciGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\aliciGiris.Designer.cs">
+      <DependentUpon>aliciGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satıcı\SaticiSatisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satıcı\SaticiSatisEkrani.Designer.cs">
+      <DependentUpon>SaticiSatisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Satıcı\saticiYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satıcı\saticiYonetim.Designer.cs">
+      <DependentUpon>saticiYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giriş ve Kayıt Ekranı\secimEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giriş ve Kayıt Ekranı\secimEkrani.Designer.cs">
+      <DependentUpon>secimEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Satıcı\urunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satıcı\urunEkle.Designer.cs">
+      <DependentUpon>urunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giriş ve Kayıt Ekranı\uyeEkle.cs" />
+    <EmbeddedResource Include="Admin\adminGiris.resx">
+      <DependentUpon>adminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminYonetim.resx">
+      <DependentUpon>AdminYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\bakiyeOnay.resx">
+      <DependentUpon>bakiyeOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\satisOnay.resx">
+      <DependentUpon>satisOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\uyeOnay.resx">
+      <DependentUpon>uyeOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\AliciYonetim.resx">
+      <DependentUpon>AliciYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\bakiyeYukle.resx">
+      <DependentUpon>bakiyeYukle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\satinAl.resx">
+      <DependentUpon>satinAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\varliklar.resx">
+      <DependentUpon>varliklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giriş ve Kayıt Ekranı\kayitOl.resx">
+      <DependentUpon>kayitOl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satıcı\saticiGiris.resx">
+      <DependentUpon>saticiGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\aliciGiris.resx">
+      <DependentUpon>aliciGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satıcı\SaticiSatisEkrani.resx">
+      <DependentUpon>SaticiSatisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Satıcı\saticiYonetim.resx">
+      <DependentUpon>saticiYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giriş ve Kayıt Ekranı\secimEkrani.resx">
+      <DependentUpon>secimEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Satıcı\urunEkle.resx">
+      <DependentUpon>urunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BorsaDataSet.xsc">
+      <DependentUpon>BorsaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BorsaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BorsaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BorsaDataSet.xss">
+      <DependentUpon>BorsaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
