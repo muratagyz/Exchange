@@ -54,6 +54,12 @@
     <Compile Include="Admin\AdminYonetim.Designer.cs">
       <DependentUpon>AdminYonetim.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\bakiyeOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\bakiyeOnay.Designer.cs">
+      <DependentUpon>bakiyeOnay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\satisOnay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,24 @@
     <Compile Include="Alıcı\AliciYonetim.Designer.cs">
       <DependentUpon>AliciYonetim.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alıcı\bakiyeYukle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\bakiyeYukle.Designer.cs">
+      <DependentUpon>bakiyeYukle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\satinAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\satinAl.Designer.cs">
+      <DependentUpon>satinAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alıcı\varliklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alıcı\varliklar.Designer.cs">
+      <DependentUpon>varliklar.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorsaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,14 +109,14 @@
     </Compile>
     <Compile Include="Concrete\urun.cs" />
     <Compile Include="Concrete\urunManager.cs" />
-    <Compile Include="girisKontrol.cs" />
+    <Compile Include="Giriş ve Kayıt Ekranı\girisKontrol.cs" />
     <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Giriş ve Kayıt Ekranı\kayitOl.Designer.cs">
       <DependentUpon>kayitOl.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminIslemler.cs" />
+    <Compile Include="Admin\adminIslemler.cs" />
     <Compile Include="Satıcı\saticiGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,12 +155,15 @@
     <Compile Include="Satıcı\urunEkle.Designer.cs">
       <DependentUpon>urunEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="uyeEkle.cs" />
+    <Compile Include="Giriş ve Kayıt Ekranı\uyeEkle.cs" />
     <EmbeddedResource Include="Admin\adminGiris.resx">
       <DependentUpon>adminGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminYonetim.resx">
       <DependentUpon>AdminYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\bakiyeOnay.resx">
+      <DependentUpon>bakiyeOnay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\satisOnay.resx">
       <DependentUpon>satisOnay.cs</DependentUpon>
@@ -146,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alıcı\AliciYonetim.resx">
       <DependentUpon>AliciYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\bakiyeYukle.resx">
+      <DependentUpon>bakiyeYukle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\satinAl.resx">
+      <DependentUpon>satinAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alıcı\varliklar.resx">
+      <DependentUpon>varliklar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giriş ve Kayıt Ekranı\kayitOl.resx">
       <DependentUpon>kayitOl.cs</DependentUpon>

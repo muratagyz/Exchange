@@ -34,13 +34,12 @@ namespace borsa
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Satıcı.urunEkle ue = new Satıcı.urunEkle();
             girisKontrol validasyon = new girisKontrol();
             lblOnay.Text = validasyon.onayliMi(txtKullaniciAdi.Text, "tblSatici");
             validasyon.kontrol("tblSatici", "kad", "sifre", txtKullaniciAdi.Text, txtSifre.Text);
             if (validasyon.bilgiKontrol == true && lblOnay.Text == true.ToString())
             {
+                this.Hide();
                 string kid;
                 SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
                 con.Open();

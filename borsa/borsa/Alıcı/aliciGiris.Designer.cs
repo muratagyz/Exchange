@@ -143,7 +143,7 @@ namespace borsa
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmLoginAlici";
-            this.Text = "Alıcı Giriş";
+            this.Text = "w";
             this.Load += new System.EventHandler(this.frmLoginAlici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -31,11 +31,11 @@ namespace borsa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaticiYonteim));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sonislemler = new System.Windows.Forms.Button();
             this.satisonayla = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.sonislemler = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,18 +48,6 @@ namespace borsa
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // sonislemler
-            // 
-            this.sonislemler.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.sonislemler.ForeColor = System.Drawing.Color.White;
-            this.sonislemler.Location = new System.Drawing.Point(258, 66);
-            this.sonislemler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.sonislemler.Name = "sonislemler";
-            this.sonislemler.Size = new System.Drawing.Size(101, 45);
-            this.sonislemler.TabIndex = 30;
-            this.sonislemler.Text = "Son İşlemler";
-            this.sonislemler.UseVisualStyleBackColor = false;
             // 
             // satisonayla
             // 
@@ -111,6 +99,20 @@ namespace borsa
             this.label2.Size = new System.Drawing.Size(16, 17);
             this.label2.TabIndex = 33;
             this.label2.Text = "0";
+            this.label2.Visible = false;
+            // 
+            // sonislemler
+            // 
+            this.sonislemler.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.sonislemler.ForeColor = System.Drawing.Color.White;
+            this.sonislemler.Location = new System.Drawing.Point(258, 66);
+            this.sonislemler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.sonislemler.Name = "sonislemler";
+            this.sonislemler.Size = new System.Drawing.Size(101, 45);
+            this.sonislemler.TabIndex = 30;
+            this.sonislemler.Text = "Son İşlemler";
+            this.sonislemler.UseVisualStyleBackColor = false;
+            this.sonislemler.Click += new System.EventHandler(this.sonislemler_Click);
             // 
             // SaticiYonteim
             // 
@@ -135,10 +137,10 @@ namespace borsa
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button sonislemler;
         private System.Windows.Forms.Button satisonayla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button sonislemler;
     }
 }

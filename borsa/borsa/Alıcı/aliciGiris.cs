@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace borsa
 {
@@ -23,19 +24,28 @@ namespace borsa
             sc.Show();
             this.Hide();
         }
+        AliciYonetim ay = new AliciYonetim();
+        SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             girisKontrol validasyon = new girisKontrol();
-            lblOnay.Text = validasyon.onayliMi(txtKullaniciAdi.Text,"tblAlici");
+            lblOnay.Text = validasyon.onayliMi(txtKullaniciAdi.Text, "tblAlici");
             validasyon.kontrol("tblAlici", "kad", "sifre", txtKullaniciAdi.Text, txtSifre.Text);
             if (validasyon.bilgiKontrol == true && lblOnay.Text == true.ToString())
             {
-                MessageBox.Show("Başarılı bir şekilde giriş yaptınız.");
-                AliciYonetim ay = new AliciYonetim();
-                ay.Show();
                 this.Hide();
+                string kid;
+                con.Open();
+                SqlCommand cmd2 = new SqlCommand("Select id from tblAlici where kad = '" + txtKullaniciAdi.Text + "'", con);
+                SqlDataReader dr = cmd2.ExecuteReader();
+                while (dr.Read())
+                {
+                    kid = dr["id"].ToString();
+                    ay.id = kid;
+                    MessageBox.Show("Başarılı bir şekilde giriş yaptınız.");
+                    ay.ShowDialog();
+                }
             }
             else
             {

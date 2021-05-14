@@ -36,7 +36,10 @@ namespace borsa
             this.satisonayla = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBakiye = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +71,7 @@ namespace borsa
             // 
             this.sonislemler.BackColor = System.Drawing.Color.MediumAquamarine;
             this.sonislemler.ForeColor = System.Drawing.Color.White;
-            this.sonislemler.Location = new System.Drawing.Point(258, 120);
+            this.sonislemler.Location = new System.Drawing.Point(258, 104);
             this.sonislemler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sonislemler.Name = "sonislemler";
             this.sonislemler.Size = new System.Drawing.Size(101, 45);
@@ -81,12 +84,12 @@ namespace borsa
             // 
             this.satisonayla.BackColor = System.Drawing.Color.MediumAquamarine;
             this.satisonayla.ForeColor = System.Drawing.Color.White;
-            this.satisonayla.Location = new System.Drawing.Point(258, 65);
+            this.satisonayla.Location = new System.Drawing.Point(258, 51);
             this.satisonayla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.satisonayla.Name = "satisonayla";
             this.satisonayla.Size = new System.Drawing.Size(101, 45);
             this.satisonayla.TabIndex = 34;
-            this.satisonayla.Text = "Satış Yap";
+            this.satisonayla.Text = "Satın Al";
             this.satisonayla.UseVisualStyleBackColor = false;
             this.satisonayla.Click += new System.EventHandler(this.satisonayla_Click);
             // 
@@ -108,31 +111,71 @@ namespace borsa
             this.label2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(255, 21);
+            this.label2.Location = new System.Drawing.Point(362, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 38;
             this.label2.Text = "Bakiye:";
             // 
-            // label3
+            // lblBakiye
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Silver;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(315, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "100 TL";
+            this.lblBakiye.AutoSize = true;
+            this.lblBakiye.BackColor = System.Drawing.Color.Silver;
+            this.lblBakiye.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.lblBakiye.ForeColor = System.Drawing.Color.White;
+            this.lblBakiye.Location = new System.Drawing.Point(422, 25);
+            this.lblBakiye.Name = "lblBakiye";
+            this.lblBakiye.Size = new System.Drawing.Size(48, 16);
+            this.lblBakiye.TabIndex = 39;
+            this.lblBakiye.Text = "100 TL";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(365, 104);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 45);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Bakiye Yükle";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 41;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(365, 51);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 45);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "Varlıklarım";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AliciYonetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(404, 198);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(485, 198);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblBakiye);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -141,6 +184,7 @@ namespace borsa
             this.Controls.Add(this.label1);
             this.Name = "AliciYonetim";
             this.Text = "AliciYonetim";
+            this.Load += new System.EventHandler(this.AliciYonetim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,6 +199,9 @@ namespace borsa
         private System.Windows.Forms.Button satisonayla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBakiye;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -29,6 +29,22 @@ namespace borsa
             da.Fill(dt);
             con.Close();
         }
+        public void veriListele3(DataGridView dgw, DataTable dt)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select tblUrun.id, tblUrun.urunAd, tblUrun.urunMiktar, tblUrun.urunFiyat,  tblSatici.ad, tblSatici.id from tblUrun INNER JOIN tblSatici on tblUrun.urunSatici = tblSatici.id where tblUrun.onay='True'", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            con.Close();
+        }
+        public void veriListele4(DataGridView dgw, DataTable dt, string aliciId)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select varlikAd,varlikMiktar,varlikFiyat from tblVarlik where aliciId='" + aliciId + "'", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            con.Close();
+        }
 
         public void veriSilme(string tabloAdi, string id)
         {

@@ -36,6 +36,8 @@ namespace borsa
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.uyeonayla = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +115,38 @@ namespace borsa
             this.uyeonayla.UseVisualStyleBackColor = false;
             this.uyeonayla.Click += new System.EventHandler(this.uyeonayla_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SandyBrown;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(366, 13);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 45);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Bakiye Onaylama";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SandyBrown;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.TabIndex = 29;
+            // 
             // AdminYonetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(404, 198);
+            this.ClientSize = new System.Drawing.Size(491, 198);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sonislemler);
@@ -127,6 +155,7 @@ namespace borsa
             this.Controls.Add(this.label1);
             this.Name = "AdminYonetim";
             this.Text = "AdminYönetim";
+            this.Load += new System.EventHandler(this.AdminYonetim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,5 +170,7 @@ namespace borsa
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button uyeonayla;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
     }
 }

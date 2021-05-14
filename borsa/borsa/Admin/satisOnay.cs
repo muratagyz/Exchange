@@ -64,5 +64,12 @@ namespace borsa.Admin
             dataGridView1.DataSource = dt;
             MessageBox.Show("Ürün pazardan çekildi...");
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            AdminYonetim ay = new AdminYonetim();
+            ay.Show();
+            this.Hide();
+        }
     }
 }

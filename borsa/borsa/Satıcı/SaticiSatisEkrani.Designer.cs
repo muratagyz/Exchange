@@ -35,12 +35,13 @@ namespace borsa
             this.UrunKilosu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtMiktar = new System.Windows.Forms.TextBox();
+            this.txtFiyat = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,27 +97,28 @@ namespace borsa
             this.button1.TabIndex = 5;
             this.button1.Text = "Satış Bilgileri Gönder";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtAd
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtAd.Location = new System.Drawing.Point(102, 50);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(137, 20);
+            this.txtAd.TabIndex = 6;
             // 
-            // textBox2
+            // txtMiktar
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtMiktar.Location = new System.Drawing.Point(104, 88);
+            this.txtMiktar.Name = "txtMiktar";
+            this.txtMiktar.Size = new System.Drawing.Size(135, 20);
+            this.txtMiktar.TabIndex = 7;
             // 
-            // textBox3
+            // txtFiyat
             // 
-            this.textBox3.Location = new System.Drawing.Point(104, 135);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtFiyat.Location = new System.Drawing.Point(104, 135);
+            this.txtFiyat.Name = "txtFiyat";
+            this.txtFiyat.Size = new System.Drawing.Size(135, 20);
+            this.txtFiyat.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -149,6 +151,17 @@ namespace borsa
             this.label4.Size = new System.Drawing.Size(28, 26);
             this.label4.TabIndex = 25;
             this.label4.Text = "🡄";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblId.Location = new System.Drawing.Point(269, 102);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 24);
+            this.lblId.TabIndex = 26;
+            this.lblId.Visible = false;
             // 
             // SaticiSatisEkrani
             // 
@@ -156,12 +169,13 @@ namespace borsa
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(539, 229);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFiyat);
+            this.Controls.Add(this.txtMiktar);
+            this.Controls.Add(this.txtAd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UrunKilosu);
@@ -169,6 +183,7 @@ namespace borsa
             this.Controls.Add(this.urunAdi);
             this.Name = "SaticiSatisEkrani";
             this.Text = "SaticiSatisEkrani";
+            this.Load += new System.EventHandler(this.SaticiSatisEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,11 +197,12 @@ namespace borsa
         private System.Windows.Forms.Label UrunKilosu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtMiktar;
+        private System.Windows.Forms.TextBox txtFiyat;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblId;
     }
 }

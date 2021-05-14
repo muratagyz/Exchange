@@ -73,7 +73,7 @@ namespace borsa
             this.rdbAlici.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbAlici.Name = "rdbAlici";
             this.rdbAlici.Size = new System.Drawing.Size(55, 24);
-            this.rdbAlici.TabIndex = 2;
+            this.rdbAlici.TabIndex = 222;
             this.rdbAlici.TabStop = true;
             this.rdbAlici.Text = "Alıcı";
             this.rdbAlici.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@ namespace borsa
             this.rdbSatici.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbSatici.Name = "rdbSatici";
             this.rdbSatici.Size = new System.Drawing.Size(66, 24);
-            this.rdbSatici.TabIndex = 3;
+            this.rdbSatici.TabIndex = 333;
             this.rdbSatici.TabStop = true;
             this.rdbSatici.Text = "Satıcı";
             this.rdbSatici.UseVisualStyleBackColor = true;
@@ -95,14 +95,14 @@ namespace borsa
             this.txtAd.Location = new System.Drawing.Point(55, 91);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(125, 26);
-            this.txtAd.TabIndex = 4;
+            this.txtAd.TabIndex = 1;
             // 
             // txtKullaniciAd
             // 
             this.txtKullaniciAd.Location = new System.Drawing.Point(55, 217);
             this.txtKullaniciAd.Name = "txtKullaniciAd";
             this.txtKullaniciAd.Size = new System.Drawing.Size(125, 26);
-            this.txtKullaniciAd.TabIndex = 6;
+            this.txtKullaniciAd.TabIndex = 3;
             // 
             // label2
             // 
@@ -118,7 +118,7 @@ namespace borsa
             this.txtSoyad.Location = new System.Drawing.Point(55, 156);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(125, 26);
-            this.txtSoyad.TabIndex = 8;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label3
             // 
@@ -134,7 +134,7 @@ namespace borsa
             this.txtSifre.Location = new System.Drawing.Point(55, 282);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(125, 26);
-            this.txtSifre.TabIndex = 10;
+            this.txtSifre.TabIndex = 4;
             // 
             // label4
             // 
@@ -150,7 +150,7 @@ namespace borsa
             this.txtTel.Location = new System.Drawing.Point(227, 156);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(125, 26);
-            this.txtTel.TabIndex = 14;
+            this.txtTel.TabIndex = 6;
             // 
             // label5
             // 
@@ -166,7 +166,7 @@ namespace borsa
             this.txtTc.Location = new System.Drawing.Point(227, 91);
             this.txtTc.Name = "txtTc";
             this.txtTc.Size = new System.Drawing.Size(125, 26);
-            this.txtTc.TabIndex = 12;
+            this.txtTc.TabIndex = 5;
             // 
             // label6
             // 
@@ -183,7 +183,7 @@ namespace borsa
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(125, 94);
-            this.txtAdres.TabIndex = 18;
+            this.txtAdres.TabIndex = 8;
             // 
             // label7
             // 
@@ -199,7 +199,7 @@ namespace borsa
             this.txtEmail.Location = new System.Drawing.Point(227, 217);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(125, 26);
-            this.txtEmail.TabIndex = 16;
+            this.txtEmail.TabIndex = 7;
             // 
             // label8
             // 
@@ -218,7 +218,7 @@ namespace borsa
             this.btnKayitOl.Location = new System.Drawing.Point(54, 341);
             this.btnKayitOl.Name = "btnKayitOl";
             this.btnKayitOl.Size = new System.Drawing.Size(126, 35);
-            this.btnKayitOl.TabIndex = 19;
+            this.btnKayitOl.TabIndex = 9;
             this.btnKayitOl.Text = "Kayıt Ol";
             this.btnKayitOl.UseVisualStyleBackColor = false;
             this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click_1);
@@ -230,7 +230,7 @@ namespace borsa
             this.label9.Location = new System.Drawing.Point(100, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 18);
-            this.label9.TabIndex = 20;
+            this.label9.TabIndex = 2044;
             this.label9.Text = "Kayıt Olma";
             // 
             // label10
@@ -241,7 +241,7 @@ namespace borsa
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 26);
-            this.label10.TabIndex = 21;
+            this.label10.TabIndex = 21444;
             this.label10.Text = "🡄";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -263,7 +263,7 @@ namespace borsa
             this.label11.Location = new System.Drawing.Point(112, 37);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 18);
-            this.label11.TabIndex = 23;
+            this.label11.TabIndex = 2344;
             this.label11.Text = "Ekranı";
             // 
             // kayitOl
