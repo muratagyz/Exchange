@@ -18,9 +18,6 @@
 $ git clone https://github.com/muratagyz/Exchange
 ```
 
-## Scrum Table Ekran Görüntüsü
-![Image of Yaktocat](https://github.com/muratagyz/Exchange/blob/main/ScrumTable/exchange1.PNG)
-
 ## Katkıda Bulunanlar
 <table>
   <tr>
