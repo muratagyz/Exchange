@@ -72,35 +72,41 @@
     <Compile Include="Admin\uyeOnay.Designer.cs">
       <DependentUpon>uyeOnay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alıcı\aliciIslemler.cs" />
-    <Compile Include="Alıcı\AliciYonetim.cs">
+    <Compile Include="Alici\aliciIslemler.cs" />
+    <Compile Include="Alici\AliciYonetim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alıcı\AliciYonetim.Designer.cs">
+    <Compile Include="Alici\AliciYonetim.Designer.cs">
       <DependentUpon>AliciYonetim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alıcı\bakiyeYukle.cs">
+    <Compile Include="Alici\bakiyeYukle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alıcı\bakiyeYukle.Designer.cs">
+    <Compile Include="Alici\bakiyeYukle.Designer.cs">
       <DependentUpon>bakiyeYukle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alıcı\otoSatinAl.cs">
+    <Compile Include="Alici\otoSatinAl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alıcı\otoSatinAl.Designer.cs">
+    <Compile Include="Alici\otoSatinAl.Designer.cs">
       <DependentUpon>otoSatinAl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alıcı\satinAl.cs">
+    <Compile Include="Alici\rapor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alıcı\satinAl.Designer.cs">
+    <Compile Include="Alici\rapor.Designer.cs">
+      <DependentUpon>rapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alici\satinAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alici\satinAl.Designer.cs">
       <DependentUpon>satinAl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alıcı\varliklar.cs">
+    <Compile Include="Alici\varliklar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alıcı\varliklar.Designer.cs">
+    <Compile Include="Alici\varliklar.Designer.cs">
       <DependentUpon>varliklar.cs</DependentUpon>
     </Compile>
     <Compile Include="BorsaDataSet.Designer.cs">
@@ -124,29 +130,29 @@
       <DependentUpon>kayitOl.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\adminIslemler.cs" />
-    <Compile Include="Satıcı\saticiGiris.cs">
+    <Compile Include="Satici\saticiGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Satıcı\saticiGiris.Designer.cs">
+    <Compile Include="Satici\saticiGiris.Designer.cs">
       <DependentUpon>saticiGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alıcı\aliciGiris.cs">
+    <Compile Include="Alici\aliciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alıcı\aliciGiris.Designer.cs">
+    <Compile Include="Alici\aliciGiris.Designer.cs">
       <DependentUpon>aliciGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="Satıcı\saticiIslemler.cs" />
-    <Compile Include="Satıcı\SaticiSatisEkrani.cs">
+    <Compile Include="Satici\saticiIslemler.cs" />
+    <Compile Include="Satici\SaticiSatisEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Satıcı\SaticiSatisEkrani.Designer.cs">
+    <Compile Include="Satici\SaticiSatisEkrani.Designer.cs">
       <DependentUpon>SaticiSatisEkrani.cs</DependentUpon>
     </Compile>
-    <Compile Include="Satıcı\saticiYonetim.cs">
+    <Compile Include="Satici\saticiYonetim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Satıcı\saticiYonetim.Designer.cs">
+    <Compile Include="Satici\saticiYonetim.Designer.cs">
       <DependentUpon>saticiYonetim.cs</DependentUpon>
     </Compile>
     <Compile Include="Giriş ve Kayıt Ekranı\secimEkrani.cs">
@@ -173,34 +179,37 @@
     <EmbeddedResource Include="Admin\uyeOnay.resx">
       <DependentUpon>uyeOnay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alıcı\AliciYonetim.resx">
+    <EmbeddedResource Include="Alici\AliciYonetim.resx">
       <DependentUpon>AliciYonetim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alıcı\bakiyeYukle.resx">
+    <EmbeddedResource Include="Alici\bakiyeYukle.resx">
       <DependentUpon>bakiyeYukle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alıcı\otoSatinAl.resx">
+    <EmbeddedResource Include="Alici\otoSatinAl.resx">
       <DependentUpon>otoSatinAl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alıcı\satinAl.resx">
+    <EmbeddedResource Include="Alici\rapor.resx">
+      <DependentUpon>rapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alici\satinAl.resx">
       <DependentUpon>satinAl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alıcı\varliklar.resx">
+    <EmbeddedResource Include="Alici\varliklar.resx">
       <DependentUpon>varliklar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giriş ve Kayıt Ekranı\kayitOl.resx">
       <DependentUpon>kayitOl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Satıcı\saticiGiris.resx">
+    <EmbeddedResource Include="Satici\saticiGiris.resx">
       <DependentUpon>saticiGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alıcı\aliciGiris.resx">
+    <EmbeddedResource Include="Alici\aliciGiris.resx">
       <DependentUpon>aliciGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Satıcı\SaticiSatisEkrani.resx">
+    <EmbeddedResource Include="Satici\SaticiSatisEkrani.resx">
       <DependentUpon>SaticiSatisEkrani.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Satıcı\saticiYonetim.resx">
+    <EmbeddedResource Include="Satici\saticiYonetim.resx">
       <DependentUpon>saticiYonetim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giriş ve Kayıt Ekranı\secimEkrani.resx">

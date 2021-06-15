@@ -30,13 +30,21 @@ namespace borsa.Alıcı
             da.Fill(dt);
             con.Close();
         }
+        public string urunId;
         public void fiyatBelirtme()
         {
-            urunId = dataGridView1.Rows[0].Cells[0].Value.ToString();
-            urunAd = dataGridView1.Rows[0].Cells[1].Value.ToString();
-            birimFiyat = Convert.ToInt32(dataGridView1.Rows[0].Cells[2].Value.ToString());
-            miktar = Convert.ToInt32(dataGridView1.Rows[0].Cells[3].Value.ToString());
-            toplamFiyat = birimFiyat * miktar;
+            if (dataGridView1.Rows.Count != 1)
+            {
+                urunId = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                urunAd = dataGridView1.Rows[0].Cells[1].Value.ToString();
+                birimFiyat = Convert.ToInt32(dataGridView1.Rows[0].Cells[2].Value.ToString());
+                miktar = Convert.ToInt32(dataGridView1.Rows[0].Cells[3].Value.ToString());
+                toplamFiyat = birimFiyat * miktar;
+            }
+            else
+            {
+                
+            }
         }
         SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
         private void button2_Click(object sender, EventArgs e)
@@ -58,6 +66,8 @@ namespace borsa.Alıcı
 
         private void otoSatinAl_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+            listeTazele();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT distinct urunAd FROM tblUrun";
             cmd.Connection = con;
@@ -74,7 +84,6 @@ namespace borsa.Alıcı
             comboBox1.SelectedIndex = 0;
         }
 
-        string urunId;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -84,6 +93,82 @@ namespace borsa.Alıcı
         }
 
         public int birimFiyat, miktar, toplamFiyat;
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            if (txtBelirliFiyat.Text == "")
+            {
+                MessageBox.Show("Lütfen gerekli yerleri doldurunuz.");
+            }
+            else
+            {
+                int belirliFiyat = Convert.ToInt32(txtBelirliFiyat.Text);
+                birimFiyat = Convert.ToInt32(dataGridView1.Rows[0].Cells[2].Value);
+                if (belirliFiyat < birimFiyat)
+                {
+                    MessageBox.Show("Birim fiyatı belirlenen fiyattan yüksek olduğu için satın alma işlemi yapılmadı.");
+                }
+                else
+                {
+                    fiyatBelirtme();
+
+                    if (bakiye > toplamFiyat)
+                    {
+                        while (bakiye > toplamFiyat && belirliFiyat > birimFiyat)
+                        {
+
+                            fiyatBelirtme();
+
+                            if (bakiye < toplamFiyat || belirliFiyat < birimFiyat)
+                            {
+                                MessageBox.Show("Bakiyeniz yetersizdir veya belirlenen fiyatın üzerinde ürün kalmıştır.");
+                                break;
+                            }
+                            con.Open();
+                            SqlCommand varlikEkle = new SqlCommand("insert into tblVarlik (varlikAd,varlikMiktar,varlikFiyat,aliciId) values ('" + urunAd + "', " + miktar + "," + birimFiyat + "," + id + ")", con);
+                            varlikEkle.ExecuteNonQuery();
+                            con.Close();
+
+
+                            con.Open();
+                            SqlCommand satilanUrunSil = new SqlCommand("delete from tblUrun where id=" + urunId + "", con);
+                            satilanUrunSil.ExecuteNonQuery();
+                            con.Close();
+
+                            bakiye = bakiye - toplamFiyat;
+
+                            con.Open();
+                            SqlCommand bakiyeGuncelle = new SqlCommand("update tblAlici set bakiye=" + bakiye + " where id=" + id + "", con);
+                            bakiyeGuncelle.ExecuteNonQuery();
+                            con.Close();
+
+
+                            listeTazele();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bakiyeniz yetersizdir");
+                    }
+
+                    MessageBox.Show("Satın alma işlemi sona ermiştir.");
+
+                }
+
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTarih.Text = DateTime.Now.ToLongDateString();
+            lblSaat.Text = DateTime.Now.ToLongTimeString();
+        }
+
         public string urunAd;
 
         private void button3_Click(object sender, EventArgs e)
@@ -100,8 +185,10 @@ namespace borsa.Alıcı
                         MessageBox.Show("Bakiyeniz yetersizdir");
                         break;
                     }
+
+
                     con.Open();
-                    SqlCommand varlikEkle = new SqlCommand("insert into tblVarlik (varlikAd,varlikMiktar,varlikFiyat,aliciId) values ('" + urunAd + "', " + miktar + "," + birimFiyat + "," + id + ")", con);
+                    SqlCommand varlikEkle = new SqlCommand("insert into tblVarlik (varlikAd,varlikMiktar,varlikFiyat,aliciId,islemTarih) values ('" + urunAd + "', " + miktar + "," + birimFiyat + "," + id + ",'" + lblTarih.Text + " " + lblSaat.Text + "')", con);
                     varlikEkle.ExecuteNonQuery();
                     con.Close();
 
