@@ -1,7 +1,7 @@
 <h1>Yazılım Yapımı [Borsa Projesi] </h1>
 
 ## Proje Açıklama:
-> Yazılım yapımı Final ödevi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek. 
+> Yazılım yapımı Final Projesi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek. 
 > Kullandığımız Teknolojiler:
 > <li> Windows Form </li>  
 > <li> MSSQL </li>
