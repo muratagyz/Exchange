@@ -17,7 +17,7 @@ namespace borsa.Admin
         {
             InitializeComponent();
         }
-        public string bakiye;
+        public string bakiyei;
         public string id;
         public int toplam;
         SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
