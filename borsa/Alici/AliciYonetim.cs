@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using borsa.Alıcı;
+using borsa.Alici;
 
 namespace borsa
 {
@@ -90,6 +91,12 @@ namespace borsa
             osa.bakiye = bakiye;
             osa.id = id;
             osa.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            rapor r = new rapor();
+            r.Show();
         }
     }
 }

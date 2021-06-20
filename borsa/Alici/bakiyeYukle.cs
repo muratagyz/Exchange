@@ -19,14 +19,13 @@ namespace borsa.Alıcı
         }
 
         public string id;
-        public int bakiye;
+        public int bakiye, dolar = 8, euro = 10, sterlin = 12;
         SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
         aliciIslemler ali = new aliciIslemler();
         private void bakiyeYukle_Load(object sender, EventArgs e)
         {
             string isim = "";
             ali.isimCek(isim, id, lblKarsilama.Text, bakiye);
-
         }
 
 
@@ -35,17 +34,65 @@ namespace borsa.Alıcı
             try
             {
                 int eklenenBakiye = 0;
-                eklenenBakiye = int.Parse(textBox1.Text);
-                if (eklenenBakiye == 0)
+                if (comboBox1.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Lütfen 0'dan farklı değer girin.");
+                    eklenenBakiye = int.Parse(textBox1.Text);
+                    if (eklenenBakiye == 0)
+                    {
+                        MessageBox.Show("Lütfen 0'dan farklı değer girin.");
+                    }
+                    else
+                    {
+
+                        ali.onayBeklet(id, eklenenBakiye);
+                        MessageBox.Show("Bakiye ekleme işlemizin alınmıştır, en kısa süre içinde eklemeniz yapılacaktır.");
+                        this.Hide();
+                    }
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    eklenenBakiye = int.Parse(textBox1.Text) * dolar;
+                    if (eklenenBakiye == 0)
+                    {
+                        MessageBox.Show("Lütfen 0'dan farklı değer girin.");
+                    }
+                    else
+                    {
+
+                        ali.onayBeklet(id, eklenenBakiye);
+                        MessageBox.Show("Bakiye ekleme işlemizin alınmıştır, en kısa süre içinde eklemeniz yapılacaktır.");
+                        this.Hide();
+                    }
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    eklenenBakiye = int.Parse(textBox1.Text) * euro;
+                    if (eklenenBakiye == 0)
+                    {
+                        MessageBox.Show("Lütfen 0'dan farklı değer girin.");
+                    }
+                    else
+                    {
+
+                        ali.onayBeklet(id, eklenenBakiye);
+                        MessageBox.Show("Bakiye ekleme işlemizin alınmıştır, en kısa süre içinde eklemeniz yapılacaktır.");
+                        this.Hide();
+                    }
                 }
                 else
                 {
+                    eklenenBakiye = int.Parse(textBox1.Text) * sterlin;
+                    if (eklenenBakiye == 0)
+                    {
+                        MessageBox.Show("Lütfen 0'dan farklı değer girin.");
+                    }
+                    else
+                    {
 
-                    ali.onayBeklet(id, int.Parse(textBox1.Text));
-                    MessageBox.Show("Bakiye ekleme işlemizin alınmıştır, en kısa süre içinde eklemeniz yapılacaktır.");
-                    this.Hide();
+                        ali.onayBeklet(id, eklenenBakiye);
+                        MessageBox.Show("Bakiye ekleme işlemizin alınmıştır, en kısa süre içinde eklemeniz yapılacaktır.");
+                        this.Hide();
+                    }
                 }
 
             }

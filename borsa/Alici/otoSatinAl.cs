@@ -18,6 +18,7 @@ namespace borsa.Alıcı
             InitializeComponent();
         }
         public int bakiye = 0;
+        int muhasebe_kullanicisi = 0;
         public string id;
 
         public void listeTazele()
@@ -43,7 +44,7 @@ namespace borsa.Alıcı
             }
             else
             {
-                
+
             }
         }
         SqlConnection con = new SqlConnection("Data Source=KAANZZDEMIR;Initial Catalog=Borsa;Integrated Security=True");
@@ -130,7 +131,7 @@ namespace borsa.Alıcı
                                 break;
                             }
                             con.Open();
-                            SqlCommand varlikEkle = new SqlCommand("insert into tblVarlik (varlikAd,varlikMiktar,varlikFiyat,aliciId) values ('" + urunAd + "', " + miktar + "," + birimFiyat + "," + id + ")", con);
+                            SqlCommand varlikEkle = new SqlCommand("insert into tblVarlik (varlikAd,varlikMiktar,varlikFiyat,aliciId,islemTarih) values ('" + urunAd + "', " + miktar + "," + birimFiyat + "," + id + ",'" + lblTarih.Text + " " + lblSaat.Text + "')", con);
                             varlikEkle.ExecuteNonQuery();
                             con.Close();
 
@@ -141,6 +142,8 @@ namespace borsa.Alıcı
                             con.Close();
 
                             bakiye = bakiye - toplamFiyat;
+                            muhasebe_kullanicisi = (toplamFiyat / 100);
+                            bakiye -= muhasebe_kullanicisi;
 
                             con.Open();
                             SqlCommand bakiyeGuncelle = new SqlCommand("update tblAlici set bakiye=" + bakiye + " where id=" + id + "", con);
@@ -156,7 +159,7 @@ namespace borsa.Alıcı
                         MessageBox.Show("Bakiyeniz yetersizdir");
                     }
 
-                    MessageBox.Show("Satın alma işlemi sona ermiştir.");
+                    MessageBox.Show("Satın alma işlemi sona ermiştir, muhasebe ücreti olarak " + muhasebe_kullanicisi + " TL bakiyenizden tahsil edilmiştir.");
 
                 }
 
@@ -199,6 +202,8 @@ namespace borsa.Alıcı
                     con.Close();
 
                     bakiye = bakiye - toplamFiyat;
+                    muhasebe_kullanicisi = (toplamFiyat / 100);
+                    bakiye -= muhasebe_kullanicisi;
 
                     con.Open();
                     SqlCommand bakiyeGuncelle = new SqlCommand("update tblAlici set bakiye=" + bakiye + " where id=" + id + "", con);
@@ -214,7 +219,7 @@ namespace borsa.Alıcı
                 MessageBox.Show("Bakiyeniz yetersizdir");
             }
 
-            MessageBox.Show("Satın alma işlemi sona ermiştir.");
+            MessageBox.Show("Satın alma işlemi sona ermiştir, muhasebe ücreti olarak " + muhasebe_kullanicisi + " TL bakiyenizden tahsil edilmiştir.");
 
         }
     }

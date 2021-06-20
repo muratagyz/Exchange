@@ -142,3 +142,5 @@ C:\Users\kaanzzdemir\Source\Repos\Exchange\borsa\obj\Debug\borsa.csproj.CoreComp
 C:\Users\kaanzzdemir\Source\Repos\Exchange\borsa\obj\Debug\borsa.exe
 C:\Users\kaanzzdemir\Source\Repos\Exchange\borsa\obj\Debug\borsa.pdb
 C:\Users\kaanzzdemir\Source\Repos\Exchange\borsa\obj\Debug\borsa.Alici.rapor.resources
+C:\Users\kaanzzdemir\Source\Repos\Exchange\borsa\bin\Debug\itextsharp.dll
+C:\Users\kaanzzdemir\Source\Repos\Exchange\borsa\obj\Debug\borsa.csproj.CopyComplete
