@@ -19,8 +19,8 @@ $ git clone https://github.com/muratagyz/Exchange
 ```
 
 ## Scrum Table Görüntüsü
-<img src="ScrumTable.PNG" alt=""/><br />
-<a href="https://github.com/users/muratagyz/projects/1">Scrum Table (English)</a>
+<img src="ScrumTable.PNG" alt=""/><br /><br />
+<a href="https://github.com/users/muratagyz/projects/1"><b>Scrum Table (English)</b></a>
 
 
 ## Katkıda Bulunanlar
