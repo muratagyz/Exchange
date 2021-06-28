@@ -1,4 +1,4 @@
-<h1>Yazılım Yapımı [Borsa Projesi] </h1>
+<h1>Borsa Projesi [Yazılım Yapımı Ders Projesi] </h1>
 
 ## Proje Açıklama:
 > Yazılım yapımı Final Projesi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek. 
@@ -17,6 +17,11 @@
 ```
 $ git clone https://github.com/muratagyz/Exchange
 ```
+
+## Scrum Table Görüntüsü
+<img src="ScrumTable.PNG" alt=""/><br />
+<a href="https://github.com/users/muratagyz/projects/1">Scrum Table (English)</a>
+
 
 ## Katkıda Bulunanlar
 <table>
