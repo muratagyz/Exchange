@@ -1,29 +1,29 @@
-<h1>Borsa Projesi [Yazılım Yapımı Ders Projesi] </h1>
+<h1>Stock Exchange Project [Software Construction Course Project] </h1>
 
-## Proje Açıklama:
-> Yazılım yapımı Final Projesi için verilen kullanıcı hikayelerini belli şartlarda yerine getirmek. 
-> Kullandığımız Teknolojiler:
+## Project Description:
+>Performing the user stories given for the Final project of making software under certain conditions. 
+> Technologies We Use:
 > <li> Windows Form </li>  
 > <li> MSSQL </li>
 
-## Gerekli Araçlar
+## Necessary Tools
 
 <ul>
   <li><a href="https://visualstudio.microsoft.com/tr/downloads/">Visual Studio</a></li>
   <li><a href="https://www.microsoft.com/tr-tr/sql-server/sql-server-downloads">Microsoft Sql Server Management Studio</a></li>
 </ul>
 
-## Projeyi İndirme
+## Download The Project
 ```
 $ git clone https://github.com/muratagyz/Exchange
 ```
 
-## Scrum Table Görüntüsü
+## Scrum Table Image
 <img src="ScrumTable.PNG" alt=""/><br /><br />
 <a href="https://github.com/users/muratagyz/projects/1"><b>Scrum Table (English)</b></a>
 
 
-## Katkıda Bulunanlar
+## Contributors
 <table>
   <tr>
     <td align="center"><a href="https://github.com/kaanzzdemir"><img src="https://avatars.githubusercontent.com/u/57274202?v=4" width="100px;" alt=""/><br /><sub><b>Kaan ÖZDEMİR</b></sub></a></td>
