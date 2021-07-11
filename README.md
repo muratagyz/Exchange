@@ -23,7 +23,7 @@ $ git clone https://github.com/muratagyz/Exchange
 <a href="https://github.com/users/muratagyz/projects/1"><b>Scrum Table (English)</b></a>
 
 ## Application Lecture Video
-<br>[![Exchange](Exchange.gif)](https://www.youtube.com/watch?v=cgQsxzdSdwM)
+[![Exchange](Exchange.gif)](https://www.youtube.com/watch?v=cgQsxzdSdwM)
 
 
 ## Contributors
